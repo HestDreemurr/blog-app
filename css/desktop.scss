@@ -1,0 +1,72 @@
+body {
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "menu search"
+  "menu main";
+}
+
+header {
+  grid-area: header;
+  justify-content: space-around;
+  font-size: 1.5em;
+  
+  a#menu-button {
+    display: none;
+  }
+  
+  a#search-button > span {
+    font-size: 1.5em;
+  }
+}
+
+.menu-container {
+  all: unset;
+  grid-area: menu;
+  width: 30vw;
+  font-size: 1.3em;
+  
+  .menu {
+    animation: none;
+    transition: none;
+    transform: none;
+    width: 30vw;
+    position: fixed;
+    
+    span#close {
+      display: none;
+    }
+    
+    span#show-news-nav {
+      justify-content: flex-start;
+      
+      span.material-symbols-outlined {
+        margin-left: 10px;
+        font-size: 1.3em;
+      }
+    }
+    
+    #news-nav {
+      margin-left: 30px;
+    }
+  }
+}
+
+main.news {
+  grid-area: main;
+  width: 70vw;
+  
+  display: flex;
+  flex-flow: row wrap;
+  
+  section.new, section.source {
+    flex-grow: 1;
+    flex-basis: 45%;
+    align-self: auto;
+  }
+}
+
+section.search {
+  grid-area: search;
+  margin: 20px 300px;
+}

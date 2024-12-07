@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+p {
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2980392157);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header h1 {
+  font-family: "Jaro";
+}
+header a {
+  color: black;
+}
+
+/* MENU */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1725490196);
+  backdrop-filter: blur(1px) brightness(50%);
+  z-index: 1;
+}
+
+.menu-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.menu {
+  background-color: white;
+  width: 60vw;
+  height: 100%;
+  padding: 15px;
+  animation: slide 0.5s ease;
+  transition: transform 0.5s ease;
+  transform: translateX(-60vw);
+}
+.menu nav #news-nav {
+  display: none;
+  margin-left: 20px;
+}
+.menu nav a {
+  display: block;
+  color: gray;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 1.2em;
+}
+.menu nav a:hover {
+  color: #545353;
+  text-decoration: underline;
+}
+.menu nav span#show-news-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 8px;
+}
+
+/* SEARCH */
+.search {
+  margin: 20px;
+}
+.search form {
+  display: flex;
+  align-items: center;
+}
+.search input {
+  width: 85%;
+  height: 50px;
+  margin-right: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1em;
+}
+.search input.error {
+  border: 2px solid red;
+}
+.search input:focus {
+  border-width: 2px;
+  outline: none;
+}
+.search button {
+  width: calc(15% - 5px);
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease;
+}
+.search button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* MAIN NEWS/SOURCES */
+main.news {
+  background-color: rgba(231, 231, 231, 0.7725490196);
+  padding-top: 20px;
+}
+main.news section {
+  margin: 30px 20px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4235294118);
+  border-radius: 5px;
+}
+main.news section .title {
+  margin: 10px 0px;
+}
+main.news section .infos {
+  display: flex;
+  justify-content: space-between;
+}
+main.news section .content {
+  margin: 10px 0px;
+}
+main.news section .image {
+  width: 100%;
+  padding: 10px 0px;
+}
+main.news section .published {
+  color: #525252;
+  text-align: right;
+}
+
+/* MAIN LOADING */
+main.loading {
+  height: 75vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main.loading .loading-circle {
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgba(198, 197, 197, 0.9411764706);
+  border-top: 10px solid red;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

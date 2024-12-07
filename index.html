@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 992px)">
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header>
+    <a id="menu-button" onclick="showMenu()">
+      <span class="material-symbols-outlined">menu</span>
+    </a>
+    
+    <h1>Blog App</h1>
+    <a id="search-button" href="#">
+      <span class="material-symbols-outlined">search</span>
+    </a>
+  </header>
+  
+  <section class="menu-container">
+    <menu class="menu">
+      <span class="material-symbols-outlined" onclick="hideMenu()" id="close">close</span>
+      <nav>
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="sources-link">Sources</a>
+        <span id="show-news-nav" onclick="showNewsNav()">
+          News <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </span>
+        <div id="news-nav">
+          <a href="#">Technology</a>
+          <a href="#">Business</a>
+          <a href="#">Sports</a>
+          <a href="#">Science</a>
+          <a href="#">Health</a>
+        </div>
+      </nav>
+    </menu>
+  </section>
+  
+  <!-- MAIN -->
+  <main class="news"></main>
+  
+  <script src="js/script.js" type="module"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/loadmenuevents.js" type="module"></script>
+  <script src="js/search.js" type="module"></script>
+  <script src="js/desktop.js"></script>
+  
+</body>
+</html>

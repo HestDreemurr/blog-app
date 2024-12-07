@@ -1,0 +1,62 @@
+body {
+  display: grid;
+  grid-template-areas: "header header" "menu search" "menu main";
+}
+
+header {
+  grid-area: header;
+  justify-content: space-around;
+  font-size: 1.5em;
+}
+header a#menu-button {
+  display: none;
+}
+header a#search-button > span {
+  font-size: 1.5em;
+}
+
+.menu-container {
+  all: unset;
+  grid-area: menu;
+  width: 30vw;
+  font-size: 1.3em;
+}
+.menu-container .menu {
+  animation: none;
+  transition: none;
+  transform: none;
+  width: 30vw;
+  position: fixed;
+}
+.menu-container .menu span#close {
+  display: none;
+}
+.menu-container .menu span#show-news-nav {
+  justify-content: flex-start;
+}
+.menu-container .menu span#show-news-nav span.material-symbols-outlined {
+  margin-left: 10px;
+  font-size: 1.3em;
+}
+.menu-container .menu #news-nav {
+  margin-left: 30px;
+}
+
+main.news {
+  grid-area: main;
+  width: 70vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+main.news section.new, main.news section.source {
+  flex-grow: 1;
+  flex-basis: 45%;
+  align-self: auto;
+}
+
+section.search {
+  grid-area: search;
+  margin: 20px 300px;
+}
+
+/*# sourceMappingURL=desktop.css.map */
